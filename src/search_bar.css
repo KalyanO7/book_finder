@@ -1,0 +1,64 @@
+.search-box {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    animation: fadeInUp 1s ease forwards;
+    /* entrance animation */
+}
+
+.search-box input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    color: #000000;
+    background: rgba(255, 255, 255, 0.2);
+    width: 220px;
+    transition: width 0.4s ease;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box input:focus {
+    width: 300px;
+    /* expands smoothly */
+}
+
+.search-box button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #ff4b2b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.search-box button:hover {
+    background: #ff6f61;
+    transform: scale(1.1);
+}
+
+/* 🔥 Keyframe animation for entry */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}

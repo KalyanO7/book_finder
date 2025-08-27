@@ -1,0 +1,22 @@
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+    margin: 20px;
+    position: relative;
+    /* ensure it's in flow */
+    z-index: 10;
+    /* bring above background video */
+}
+
+.book-card {
+    background: rgba(0, 0, 0, 0.7);
+    /* darker bg so text stands out */
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    /* force white text */
+    border: 1px solid #ccc;
+    /* lighter border for visibility */
+}
